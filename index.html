@@ -1,14 +1,14 @@
 <html>
   <head>
-    <title>{Title}</title>
-    <link rel='stylesheet' href='http://example.com/css/screen.css' />
+    <title>{Chelsea in Chi}</title>
+    <link rel='stylesheet' href='tumblr/theme.css' />
   </head>
   <body>
     <header id='header'>
       <h1>
-        <a href='{BlogURL}'>{Title}</a>
+        <a href='{chelstartupchi.tumblr.com}'>{Chel Startup Chi}</a>
       </h1>
-      <p>{Description} Read this site via
+      <p>{Welcome to my tumblr blog} Read this site via
         <a href='{RSS}'>RSS</a>
       </p>
       <div class='main'>
@@ -18,7 +18,7 @@
           <header>
             <h2>
               {block:IndexPage}
-              <a href='{Permalink}'>{Title}</a>
+              <a href='{Permalink}'>{Chel Startup Chi}</a>
               {/block:IndexPage}
               {block:PermalinkPage}
               {Title}
@@ -31,14 +31,24 @@
           </footer>
         </article>
         {/block:Text}
-        {block:Photo}
-        <article class='photo'>
-          <figure aria-labelledby='photo{PostID}'>
-            <img src='{PhotoURL-HighRes}' alt='{PhotoAlt}' />
-            <figcaption id='photo{PostID}'>{Caption}</figcaption>
-          </figure>
+        {block:Quote}
+        {block:Source}
+        <article class='quote'>
+          <header>
+            <h2 class='wayfinder'>Go confidently in the direction of your dreams.</h2>
+          </header>
+          <div class='section'>
+            <div class='main'>
+              {block:Source}
+              <h2 class='source'>{Henry Thoreau}:</h2>
+              {/block:Source}
+              <blockquote class='quote-{Short}'>
+                {Quote}
+              </blockquote>
+            </div>
+          </div>
         </article>
-        {/block:Photo}
+        {/block:Quote}
         {/block:Posts}
       </div>
     </header>
