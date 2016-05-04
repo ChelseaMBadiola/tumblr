@@ -1,12 +1,12 @@
 %html
   %head
-    %title {Title}
-    %link{rel: "stylesheet", href: "http://example.com/css/screen.css"}
+    %title {Chelsea in Chi}
+    %link{rel: "stylesheet", href: "tumblr/theme.css"}
   %body
     %header#header
       %h1
-        %a{href: "{BlogURL}"} {Title}
-      %p {Description} Read this site via
+        %a{href: "{chelstartupchi.tumblr.com}"} {Chel Startup Chi}
+      %p {Welcome to my tumblr blog} Read this site via
         %a{href: "{RSS}"} RSS
       .main
         {block:Posts}
@@ -15,7 +15,7 @@
           %header
             %h2
               {block:IndexPage}
-              %a{href: "{Permalink}"} {Title}
+              %a{href: "{Permalink}"} {Chel Startup Chi}
               {/block:IndexPage}
               {block:PermalinkPage}
               {Title}
@@ -24,10 +24,17 @@
           %footer
             %p Posted at {12Hour}:{Minutes}{AmPm} {Month} {DayOfMonth}, {Year}
         {/block:Text}
-        {block:Photo}
-        %article.photo
-          %figure{aria-labelledby: "photo{PostID}"}
-            %img{src: "{PhotoURL-HighRes}", alt: "{PhotoAlt}"}
-            %figcaption{id: "photo{PostID}"} {Caption}
-        {/block:Photo}
+        {block:Quote}
+        {block:Source}
+        %article.quote
+          %header
+            %h2.wayfinder Go confidently in the direction of your dreams.
+          .section
+            .main
+              {block:Source}
+              %h2.source {Henry Thoreau}:
+              {/block:Source}
+              %blockquote{class: "quote-{Short}"}
+                {Quote}
+        {/block:Quote}
         {/block:Posts}
