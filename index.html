@@ -1,52 +1,69 @@
 <html>
   <head>
-    <title>{Chelsea in Chi}</title>
-    <link rel='stylesheet' href='tumblr/theme.css' />
+    <title>{Title}</title>
+    <link rel='stylesheet' href='http://static.tumblr.com/mlgstlq/4HHo6oq6c/theme.css' />
   </head>
   <body>
     <header id='header'>
+    <div class="column1of2">
       <h1>
-        <a href='{chelstartupchi.tumblr.com}'>{Chel Startup Chi}</a>
+        <a href='{BlogURL}'>{Title}</a>
       </h1>
-      <p>{Welcome to my tumblr blog} Read this site via
+    </div>
+      <div class="column1of2">
+      <p>{Description} <br><br>Read this site via
         <a href='{RSS}'>RSS</a>
+      </div>
+        <br />
+        <br />
+        <br />
       </p>
       <div class='main'>
         {block:Posts}
         {block:Text}
+        <div class="column2of2">
         <article class='text'>
           <header>
             <h2>
               {block:IndexPage}
-              <a href='{Permalink}'>{Chel Startup Chi}</a>
-              {/block:IndexPage}
-              {block:PermalinkPage}
               {Title}
-              {/block:PermalinkPage}
+              {/block:IndexPage}
             </h2>
           </header>
+        </div>
+          <div class="column2of2">
           <div class='content'>{Body}</div>
           <footer>
-            <p>Posted at {12Hour}:{Minutes}{AmPm} {Month} {DayOfMonth}, {Year}</p>
+            <a href='{Permalink}'>Posted on {Month} {DayOfMonth}, {Year}</a
           </footer>
         </article>
+          </div>
         {/block:Text}
+        <br />
+        <br />
         {block:Quote}
         {block:Source}
+        <div class="column2of2">
         <article class='quote'>
           <header>
-            <h2 class='wayfinder'>Go confidently in the direction of your dreams.</h2>
+            <h2 class='wayfinder'>Quote</h2>
           </header>
+        </div>
           <div class='section'>
             <div class='main'>
-              {block:Source}
-              <h2 class='source'>{Henry Thoreau}:</h2>
-              {/block:Source}
-              <blockquote class='quote-{Short}'>
+            <div class="column2of2">
+              <h3 class='blockquote quote-{Length}'>
                 {Quote}
-              </blockquote>
+              </h3>
             </div>
-          </div>
+              <div class="column2of2">
+              {block:Source}
+              <h3 class='source'>--{Source}</h3>
+              {/block:Source}
+            <footer>
+              <a href='{Permalink}'>Posted on {Month} {DayOfMonth}, {Year}</a>
+            </footer>
+            </div>
         </article>
         {/block:Quote}
         {/block:Posts}
