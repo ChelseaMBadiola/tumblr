@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	text-align: left;
 }
 ol, ul {
 	list-style: none;
@@ -54,8 +55,11 @@ table {
 */
 
 body {
+  width: 620px;
   background-color: rgb(102,205,170);
-  font-family: "Verdana", Geneva, sans-serif;
+  font-family: "Avenir", avenir next, helvetica, arial, sans-serif;
+  text-align: left;
+
 }
 
 img {
@@ -63,7 +67,7 @@ img {
 }
 
 title {
-  font-family: "Verdana",Geneva,sans-serif;
+  font-family: "Avenir", avenir next, helvetica, arial, sans-serif;
   color: #FFFFFF;
   font-size: 4.031em; /* 64.50px/3.58px = 1.125 */
   line-height: 1.4400000000000002em; /* 25.92px / 18px */
@@ -73,17 +77,30 @@ title {
 }
 
 h1 {
-
+  float: left;
   font-size: 1.728em; /* 31.104px / 18px */
   line-height: 1.6666666666666667em; /* 25.92 * 2 / 31.104 */
   padding-top: 0.8333333333333334em; /* 25.92px / 31.104 */
   padding-bottom: 1.6666666666666667em; /* 25.92 * 2 / 31.104 */
   color: #FFFFFF;
-  text-align: center;
   letter-spacing: 3x;
 }
 
 h2 {
-  text-align: left;
   color: #FFFFFF;
 }
+
+h3 {
+  text-align: left;
+}
+
+.column1of2 {
+  width: 300px;
+  float: left;
+  margin: 10px;}
+
+.column2of2 {
+  width: 620px;
+  float: left;
+  margin: 10px;}
+
